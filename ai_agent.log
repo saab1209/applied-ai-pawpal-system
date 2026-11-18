@@ -1,0 +1,18 @@
+2026-11-18 16:05:57,024 | INFO | Agent start | pet='Bella' | request='Daily morning walk' | time='08:00'
+2026-11-18 16:05:57,024 | INFO | RAG retrieve | query='Daily morning walk' | species='Dog' | hits=2
+2026-11-18 16:05:57,028 | INFO | Agent completed | pet='Bella' | task='Daily morning walk' | confidence=1.0 | human_review=False
+2026-11-18 16:05:57,029 | INFO | Agent start | pet='Milo' | request='Daily thyroid medication pill' | time='08:15'
+2026-11-18 16:05:57,029 | INFO | RAG retrieve | query='Daily thyroid medication pill' | species='Cat' | hits=2
+2026-11-18 16:05:57,029 | INFO | Agent completed | pet='Milo' | task='Daily thyroid medication pill' | confidence=0.65 | human_review=True
+2026-11-18 16:05:57,029 | INFO | Agent start | pet='Bella' | request='Give chocolate treat snack' | time='15:00'
+2026-11-18 16:05:57,029 | INFO | RAG retrieve | query='Give chocolate treat snack' | species='Dog' | hits=2
+2026-11-18 16:05:57,029 | WARNING | Guardrail blocked request for Bella: ["BLOCKED_UNSAFE_SUBSTANCE: 'chocolate' is hazardous for pets."]
+2026-11-18 16:13:11,369 | INFO | Agent start | pet='Bella' | request='Daily morning walk' | time='08:00'
+2026-11-18 16:13:11,370 | INFO | RAG retrieve | query='Daily morning walk' | species='Dog' | hits=2
+2026-11-18 16:13:11,374 | INFO | Agent completed | pet='Bella' | task='Daily morning walk' | confidence=1.0 | human_review=False
+2026-11-18 16:13:11,374 | INFO | Agent start | pet='Milo' | request='Daily thyroid medication pill' | time='08:15'
+2026-11-18 16:13:11,374 | INFO | RAG retrieve | query='Daily thyroid medication pill' | species='Cat' | hits=2
+2026-11-18 16:13:11,374 | INFO | Agent completed | pet='Milo' | task='Daily thyroid medication pill' | confidence=0.65 | human_review=True
+2026-11-18 16:13:11,374 | INFO | Agent start | pet='Bella' | request='Give chocolate treat snack' | time='15:00'
+2026-11-18 16:13:11,374 | INFO | RAG retrieve | query='Give chocolate treat snack' | species='Dog' | hits=2
+2026-11-18 16:13:11,374 | WARNING | Guardrail blocked request for Bella: ["BLOCKED_UNSAFE_SUBSTANCE: 'chocolate' is hazardous for pets."]
