@@ -1,0 +1,10 @@
+flowchart TD
+    User["Pet Owner Request<br/>(Pet Name, Care Goal, Time)"] --> Agent["PawPalAIAgent Orchestrator<br/>(ai_care_agent.py)"]
+    KB[("Veterinary Guidelines<br/>(knowledge_base/veterinary_guidelines.md)")] --> Retriever["KnowledgeRetriever (RAG)"]
+    Retriever -->|Top-K Care Rules| Agent
+    Agent --> Guardrails["Safety & Toxicity Guardrails<br/>(Toxic Foods/Meds & Dosage Check)"]
+    Guardrails -->|Blocked Toxic Item| Reject["Reject & Log Warning<br/>(ai_agent.log)"]
+    Guardrails -->|Safe / Flagged| Core["PawPal+ Core Engine<br/>(Owner, Pet, Task, Scheduler)"]
+    Core --> Critique["Self-Critique & Reliability Scorer<br/>(Confidence 0.0 - 1.0 + Conflict Check)"]
+    Critique -->|Score < 0.80 or Med Flag| HITL["Human-in-the-Loop Review<br/>& Pytest Verification"]
+    Critique -->|High Confidence >= 0.80| Output["Approved Schedule + Grounded Explanation"]
